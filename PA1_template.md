@@ -13,7 +13,7 @@ table1 <- read.csv("activity.csv",stringsAsFactors = F)
 TSPD <- tapply(table1$steps, table1$date, FUN = sum)
 hist(TSPD, breaks = 12)
 ```
-![](RepData_PeerAssessment1/plot1.png)<!-- -->
+![](plot1.png)<!-- -->
 
 ```r
 MS <- mean(TSPD, na.rm = TRUE)
@@ -41,7 +41,7 @@ plot(x=names(ADCP),y=ADCP,
      ylab = "Steps", 
      main = "average daily activity")
 ```
-![](RepData_PeerAssessment1/plot2.png)<!-- -->
+![](plot2.png)<!-- -->
 ```{r}
 names(which.max(ADCP))
 ```
@@ -71,7 +71,7 @@ hist(TSPD2, breaks = 12)
 ```r
 mean(TSPD2)
 ```
-![](RepData_PeerAssessment1/plot3.png)<!-- -->
+![](plot3.png)<!-- -->
 ```
 ## [1] 10766.19
 ```
@@ -113,4 +113,4 @@ xyplot(steps ~ interval|day, data = StepInW, type = "l", layout = c(1,2),
        main = "Time series plot of the 5-minute interval", 
        index.cond = list(2:1))
 ```
-![](RepData_PeerAssessment1/plot4.png)<!-- -->
+![](plot4.png)<!-- -->
